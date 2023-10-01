@@ -13,16 +13,20 @@ let cells = document.querySelectorAll(".cell");
 let turn =document.getElementById('turn');
 
 let player = 'X';
+
+let times = 0;
 cells.forEach(function (cell) {
     cell.addEventListener("click", () => {
       if(player == 'X'&& cell.innerHTML==''&&result.innerHTML==''){
         cell.innerHTML= player;
+        times++;
         winer(player);
         player = 'O'
         turn.innerHTML =player +" turn";
       }
       else if(player == 'O' && cell.innerHTML==''&&result.innerHTML==''){
-        cell.innerHTML= player;        
+        cell.innerHTML= player;  
+        times++;      
         winer(player);
         player = 'X'
         turn.innerHTML =player+" turn";
@@ -37,6 +41,7 @@ function reset (){
     player = 'X'
     turn.innerHTML =player+" turn";
     result.innerHTML='';
+    times=0;
 };
 
 function winer(P){
@@ -52,6 +57,9 @@ function winer(P){
     )
     {
         result.innerHTML=player + " win";
+    }
+    else if(times==9 ){
+      result.innerHTML="tie";
     }
 };
 

@@ -22,7 +22,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 .board{
@@ -69,3 +68,31 @@ body{
 }
 
 
+.result{
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--color3);
+}
+.turn{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--color4);
+}
+.reset{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--color1);
+    background-color: var(--color3);
+    border: 0;
+    border-radius: 20px;
+    width: 100%;
+}
+.game{
+    margin: 30px;
+}
