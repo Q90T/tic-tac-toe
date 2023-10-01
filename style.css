@@ -71,7 +71,6 @@ body{
 .result{
     font-size: 50px;
     font-weight: 600;
-    margin-top: 20px;
     text-align: center;
     color: var(--color3);
 }
@@ -93,6 +92,9 @@ body{
     border-radius: 20px;
     width: 100%;
 }
+.reset:hover{
+    background-color: var(--color4);
+}
 .game{
-    margin: 30px;
+    margin-right: 90px;
 }

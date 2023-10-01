@@ -59,7 +59,7 @@ function winer(P){
         result.innerHTML=player + " win";
     }
     else if(times==9 ){
-      result.innerHTML="tie";
+      result.innerHTML="Tie";
     }
 };
 
