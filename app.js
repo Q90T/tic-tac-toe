@@ -9,9 +9,13 @@ let cell8 = document.getElementById('cell8');
 let cell9 = document.getElementById('cell9');
 let result= document.getElementById('result');
 let cells = document.querySelectorAll(".cell");
-
+let xWins = document.getElementById('x');
+let oWins = document.getElementById('o');
 let turn =document.getElementById('turn');
-
+let xs =0;
+let os=0;
+let ts=0;
+let tie= document.getElementById('tie');
 let player = 'X';
 
 let times = 0;
@@ -57,9 +61,25 @@ function winer(P){
     )
     {
         result.innerHTML=player + " win";
+        if (player==='X'){
+          xs +=1;
+          xWins.innerHTML="x player : "+xs;
+
+        }
+        else{
+          os +=1;
+          oWins.innerHTML= "o player : "+os;
+
+        }
     }
     else if(times==9 ){
       result.innerHTML="Tie";
+      ts+=1;
+      tie.innerHTML="ties       : "+ts;
+
     }
 };
+xWins.innerHTML="x player : "+xs;
+tie.innerHTML="ties       : "+ts;
+oWins.innerHTML= "o player : "+os;
 
